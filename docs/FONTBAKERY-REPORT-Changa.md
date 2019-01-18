@@ -5,10 +5,11 @@ Fontbakery version: 0.6.6
 <details>
 <summary><b>[25] Family checks</b></summary>
 <details>
-<summary>:fire: <b>FAIL:</b> Check font has a license.</summary>
+<summary>:information_source: <b>INFO:</b> Does DESCRIPTION file contain broken links?</summary>
 
-* [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
-* :fire: **FAIL** No license file was found. Please add an OFL.txt or a LICENSE.txt file. If you are running fontbakery on a Google Fonts upstream repo, which is fine, just make sure there is a temporary license file in the same folder. [code: no-license]
+* [com.google.fonts/check/003](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/003)
+* :information_source: **INFO** Found an email address: mailto:edu@tipo.net.ar
+* :bread: **PASS** All links in the DESCRIPTION file look good!
 
 </details>
 <details>
@@ -19,6 +20,34 @@ Fontbakery version: 0.6.6
   INSTALLED: 0.6.6 (latest)
 
 * :bread: **PASS** Font Bakery is up-to-date
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Is this a proper HTML snippet?</summary>
+
+* [com.google.fonts/check/004](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/004)
+* :bread: **PASS** /Users/Air/Google/fonts/ofl/changa/DESCRIPTION.en_us.html is a propper HTML file.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> DESCRIPTION.en_us.html must have more than 200 bytes.</summary>
+
+* [com.google.fonts/check/005](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/005)
+* :bread: **PASS** DESCRIPTION.en_us.html is larger than 200 bytes.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> DESCRIPTION.en_us.html must have less than 1000 bytes.</summary>
+
+* [com.google.fonts/check/006](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/006)
+* :bread: **PASS** DESCRIPTION.en_us.html is smaller than 1000 bytes.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Check font has a license.</summary>
+
+* [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
+* :bread: **PASS** Found license at '/Users/Air/Google/fonts/ofl/changa/OFL.txt'
 
 </details>
 <details>
@@ -71,38 +100,10 @@ Fontbakery version: 0.6.6
 
 </details>
 <details>
-<summary>:zzz: <b>SKIP:</b> Does DESCRIPTION file contain broken links?</summary>
-
-* [com.google.fonts/check/003](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/003)
-* :zzz: **SKIP** Unfulfilled Conditions: description
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Is this a proper HTML snippet?</summary>
-
-* [com.google.fonts/check/004](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/004)
-* :zzz: **SKIP** Unfulfilled Conditions: descfile
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> DESCRIPTION.en_us.html must have more than 200 bytes.</summary>
-
-* [com.google.fonts/check/005](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/005)
-* :zzz: **SKIP** Unfulfilled Conditions: description
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> DESCRIPTION.en_us.html must have less than 1000 bytes.</summary>
-
-* [com.google.fonts/check/006](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/006)
-* :zzz: **SKIP** Unfulfilled Conditions: description
-
-</details>
-<details>
 <summary>:zzz: <b>SKIP:</b> Check METADATA.pb parse correctly. </summary>
 
 * [com.google.fonts/check/metadata/parses](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/metadata/parses)
-* :zzz: **SKIP** Font family at 'fonts' lacks a METADATA.pb file.
+* :zzz: **SKIP** Font family at '/Users/Air/Google/fonts/ofl/changa' lacks a METADATA.pb file.
 
 </details>
 <details>
@@ -187,25 +188,11 @@ Fontbakery version: 0.6.6
 <details>
 <summary><b>[118] Changa-VF.ttf</b></summary>
 <details>
-<summary>:fire: <b>FAIL:</b> Is 'gasp' table set to optimize rendering?</summary>
-
-* [com.google.fonts/check/062](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/062)
-* :fire: **FAIL** Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
-
-</details>
-<details>
 <summary>:fire: <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent.</summary>
 
 * [com.google.fonts/check/040](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/040)
 * :fire: **FAIL** OS/2.usWinAscent value should be equal or greater than 1223, but got 1100 instead [code: ascent]
 * :fire: **FAIL** OS/2.usWinDescent value should be equal or greater than 553, but got 300 instead [code: descent]
-
-</details>
-<details>
-<summary>:fire: <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions?</summary>
-
-* [com.google.fonts/check/072](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/072)
-* :fire: **FAIL** 'prep' table does not contain TrueType  instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the  `gftools fix-nonhinting` script.
 
 </details>
 <details>
@@ -233,13 +220,6 @@ Failed to sanitize file!
 
 * [com.google.fonts/check/058](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/058)
 * :fire: **FAIL** The following glyph names do not comply with naming conventions: ['yehHamzaabove_yehHamzaabovear.fina'] A glyph name may be up to 31 characters in length, must be entirely comprised of characters from the following set: A-Z a-z 0-9 .(period) _(underscore). and must not start with a digit or period. There are a few exceptions such as the special character ".notdef". The glyph names "twocents", "a1", and "_" are all valid, while "2cents" and ".twocents" are not.
-
-</details>
-<details>
-<summary>:fire: <b>FAIL:</b> Whitespace and non-breaking space have the same width?</summary>
-
-* [com.google.fonts/check/050](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/050)
-* :fire: **FAIL** Whitespace and non-breaking space have differing width: Whitespace (space) is 250 font units wide, non-breaking space (uni00A0) is 600 font units wide. Both should be positive and the same.
 
 </details>
 <details>
@@ -276,11 +256,11 @@ Failed to sanitize file!
 
 * [com.google.fonts/check/064](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/064)
 * :warning: **WARN** This font lacks caret positioning values for these ligature glyphs:
-	- fl
-	- f_f_i
-	- f_f
 	- f_f_l
+	- f_f_i
 	- fi
+	- fl
+	- f_f
 
    [code: incomplete-caret-pos-data]
 
@@ -299,13 +279,6 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 
 * [com.google.fonts/check/020](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/020)
 * :zzz: **SKIP** Unfulfilled Conditions: style
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Check copyright namerecords match license file.</summary>
-
-* [com.google.fonts/check/029](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/029)
-* :zzz: **SKIP** Unfulfilled Conditions: license
 
 </details>
 <details>
@@ -650,20 +623,13 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 * [com.google.fonts/check/054](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/054)
 * :information_source: **INFO** Hinting filesize impact:
 
-|  | fonts/Changa-VF.ttf |
+|  | /Users/Air/Google/fonts/ofl/changa/Changa-VF.ttf |
 |:--- | ---:|
 | Dehinted Size | 108.5kb |
-| Hinted Size | 107.6kb |
-| Increase | -940 bytes |
-| Change   | -0.8 % |
+| Hinted Size | 136.7kb |
+| Increase | 28.2kb |
+| Change   | 26.0 % |
 
-
-</details>
-<details>
-<summary>:information_source: <b>INFO:</b> Font has old ttfautohint applied?</summary>
-
-* [com.google.fonts/check/056](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/056)
-* :information_source: **INFO** Could not detect which version of ttfautohint was used in this font. It is typically specified as a comment in the font version entries of the 'name' table. Such font version strings are currently: ['Version 2.002']
 
 </details>
 <details>
@@ -674,10 +640,26 @@ This happens a lot when points are not extremes, which is usually bad. However, 
 
 </details>
 <details>
+<summary>:information_source: <b>INFO:</b> Is 'gasp' table set to optimize rendering?</summary>
+
+* [com.google.fonts/check/062](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/062)
+* :information_source: **INFO** These are the ppm ranges declared on the gasp table:
+
+PPM <= 65535:
+	flag = 0x0F
+	- Use gridfitting
+	- Use grayscale rendering
+	- Use gridfitting with ClearType symmetric smoothing
+	- Use smoothing along multiple axes with ClearType®
+
+* :bread: **PASS** 'gasp' table is correctly set, with one gaspRange:value of 0xFFFF:0x0F.
+
+</details>
+<details>
 <summary>:information_source: <b>INFO:</b> Check for font-v versioning </summary>
 
 * [com.google.fonts/check/166](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/166)
-* :information_source: **INFO** Version string is: "Version 2.002"
+* :information_source: **INFO** Version string is: "Version 2.002; ttfautohint (v1.8.2)"
 The version string must ideally include a git commit hash and either a 'dev' or a 'release' suffix such as in the example below:
 "Version 1.3; git-0d08353-release"
 
@@ -686,7 +668,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:information_source: <b>INFO:</b> Font contains all required tables?</summary>
 
 * [com.google.fonts/check/052](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/052)
-* :information_source: **INFO** This font contains the following optional tables [GSUB, DSIG, GPOS, loca]
+* :information_source: **INFO** This font contains the following optional tables [DSIG, GPOS, cvt , gasp, fpgm, prep, GSUB, loca]
 * :bread: **PASS** Font contains all required tables.
 
 </details>
@@ -694,7 +676,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:bread: <b>PASS:</b> Checking file is named canonically.</summary>
 
 * [com.google.fonts/check/001](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/001)
-* :bread: **PASS** fonts/Changa-VF.ttf is named canonically.
+* :bread: **PASS** /Users/Air/Google/fonts/ofl/changa/Changa-VF.ttf is named canonically.
 
 </details>
 <details>
@@ -733,6 +715,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 </details>
 <details>
+<summary>:bread: <b>PASS:</b> Check copyright namerecords match license file.</summary>
+
+* [com.google.fonts/check/029](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/029)
+* :bread: **PASS** Licensing entry on name table is correctly set.
+
+</details>
+<details>
 <summary>:bread: <b>PASS:</b> "License URL matches License text on name table?</summary>
 
 * [com.google.fonts/check/030](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/030)
@@ -751,6 +740,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 * [com.google.fonts/check/055](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/055)
 * :bread: **PASS** Version format in NAME table entries is correct.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Font has old ttfautohint applied?</summary>
+
+* [com.google.fonts/check/056](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/056)
+* :bread: **PASS** ttfautohint available in the system (1.8.2) is older than the one used in the font (1.8.2).
 
 </details>
 <details>
@@ -807,6 +803,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 * [com.google.fonts/check/042](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/042)
 * :bread: **PASS** OS/2.sTypoAscender/Descender values match hhea.ascent/descent.
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Font enables smart dropout control in "prep" table instructions?</summary>
+
+* [com.google.fonts/check/072](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/072)
+* :bread: **PASS** 'prep' table contains instructions enabling smart dropout control.
 
 </details>
 <details>
@@ -999,6 +1002,13 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 </details>
 <details>
+<summary>:bread: <b>PASS:</b> Whitespace and non-breaking space have the same width?</summary>
+
+* [com.google.fonts/check/050](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/050)
+* :bread: **PASS** Whitespace and non-breaking space have the same width.
+
+</details>
+<details>
 <summary>:bread: <b>PASS:</b> Does GPOS table have kerning information?</summary>
 
 * [com.google.fonts/check/063](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/063)
@@ -1054,5 +1064,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 8 | 5 | 66 | 6 | 58 |
-| 0% | 6% | 3% | 46% | 4% | 41% |
+| 0 | 4 | 5 | 61 | 7 | 66 |
+| 0% | 3% | 3% | 43% | 5% | 46% |

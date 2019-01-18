@@ -1,0 +1,29 @@
+#+TITLE:     Worklog: Changa Variable Font
+#+AUTHOR:    Eli H
+#+EMAIL:     elih@member.fsf.org
+#+LANGUAGE:  en
+
+This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs Org-mode]].
+
+* Changa VF
+** FontBakery Status
+*** Roman
+**** Fails 00 ****
+******* TODO :: foo      
+
+	bar
+
+**** Warns 03 ****
+******* TODO :: foo
+	
+	bar
+
+** TODOs
+*** TODO [#A] Update PR
+** Build Helpers
+*** FontBakery
+*** Addfont
+*** Build Commands
+*** Build Info
+** Post Build Steps
+   None, for now. 
