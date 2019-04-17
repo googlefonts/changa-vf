@@ -27,11 +27,11 @@ UNIX system (MacOS, GNU+Linux, Windows Subsystem for Linux (WSL)).
 To start the build process, navigate to the root directory of a font repo
 and run the following:
 
-python3 sources/BUILD.py
+python3 source/BUILD.py
 
 For additional build features, the script can be run with flags, like so:
 
-python3 sources/BUILD.py --googlefonts ~/Google/fonts/ofl/$FONTNAME --static
+python3 source/BUILD.py --googlefonts ~/Google/fonts/ofl/$FONTNAME --static
 
 
 FLAGS:
@@ -207,7 +207,7 @@ def get_source_list():
     Gets a list of source files.
     """
     print("\n**** Making a list of Glyphsapp source files:")
-    os.chdir("sources")
+    os.chdir("source")
     for name in glob.glob("*.glyphs"):
         sources.append(os.path.splitext(name)[0])
     os.chdir("..")
@@ -242,7 +242,7 @@ def run_fontmake_variable():
         if args.ufosrc == True:
             subprocess.call(
                 "fontmake \
-                          -g sources/master_ufo/%s.designspace \
+                          -g source/master_ufo/%s.designspace \
                           -o variable \
                           --output-path fonts/%s-VF.ttf"
                 % (source, source),
@@ -251,7 +251,7 @@ def run_fontmake_variable():
         else:
             subprocess.call(
                 "fontmake \
-                          -g sources/%s.glyphs \
+                          -g source/%s.glyphs \
                           -o variable \
                           --output-path fonts/%s-VF.ttf"
                 % (source, source),
@@ -270,7 +270,7 @@ def run_fontmake_static():
         print("     [+] Run: fontmake ")
         subprocess.call(
             "fontmake \
-                      -g sources/%s.glyphs \
+                      -g source/%s.glyphs \
                       -o ttf \
                       --keep-overlaps -i"
             % (source),

@@ -8,17 +8,31 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 * Changa VF
 ** FontBakery Status
 *** Roman
-**** Fails 00 ****
-******* TODO :: foo      
+**** Fails 01 ****
+******* :: check/metadata/has_regular
+	Not an issue, see: https://github.com/googlefonts/fontbakery/issues/2378
+******* :: check/integer_ppem_if_hinted
+	This needs these steps:
+	mkdir ttx && ttx -d ttx -s Changa-VF.ttf
+	v ttx/Changa-VF._h_e_a_d.ttx
+	ttx ttx/Changa-VF.ttx
+	cp ttx/Changa-VF.ttf Changa-VF.ttf
+	fontbakery check-googlefonts -l WARN Changa-VF.ttf --ghmarkdown fb.md
 
-	bar
+**** Warns 04 ****
+******* :: check/points_out_of_bounds
+	NBD
+******* :: check/kerning_for_non_ligated_sequences
+	NBD
+******* :: check/ligature_carets
+	NBD
+******* :: check/unitsperem_strict
+	NBD
 
-**** Warns 03 ****
-******* TODO :: foo
-	
-	bar
 
 ** TODOs
+*** DONE [#A] Rebuild source
+    CLOSED: [2019-04-18 Thu 18:37]
 *** TODO [#A] Update PR
 ** Build Helpers
 *** FontBakery
@@ -26,4 +40,30 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 *** Build Commands
 *** Build Info
 ** Post Build Steps
-   None, for now. 
+*** Glyph Rename Script
+from fontTools.ttLib import TTFont
+font = TTFont("Changa-Regular.ttf")
+print(font)
+glyphnames = font.getGlyphOrder()
+
+def name_report(gns):
+    for i in gns:
+        print(i)
+    print("Glyph Count:", len(gns))
+name_report(glyphnames)
+
+new_glyphnames = [
+    name.replace(
+        "yehHamzaabove_yehHamzaabovear.fina", "yehHamzaabove_yehHamzabvar.fina"
+    )
+    for name in glyphnames
+]
+
+name_report(new_glyphnames)
+font = TTFont("Changa-Regular.ttf")
+font.setGlyphOrder(new_glyphnames)
+post = font['post']
+font.save("Changa-Regular.ttf")
+ 
+*** Fix Fsselection
+    gftools fix-fsselection Changa-Regular.ttf --autofix
