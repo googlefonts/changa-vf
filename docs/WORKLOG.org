@@ -4,11 +4,19 @@
 #+LANGUAGE:  en
 
 This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs Org-mode]].
+* Org-mode is available for other editors.
+  VsCode: https://github.com/vscode-org-mode/vscode-org-mode
+  Vim: https://github.com/jceb/vim-orgmode
 
-* Changa VF
+
+* Changa VF Worklog
+
+PR: https://github.com/google/fonts/pull/1949
+Status: Waithing for review from Marc
+
 ** FontBakery Status
 *** Roman
-**** Fails 01 ****
+**** Fails 03 ****
 ******* :: check/metadata/has_regular
 	Not an issue, see: https://github.com/googlefonts/fontbakery/issues/2378
 ******* :: check/integer_ppem_if_hinted
@@ -18,7 +26,6 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 	ttx ttx/Changa-VF.ttx
 	cp ttx/Changa-VF.ttf Changa-VF.ttf
 	fontbakery check-googlefonts -l WARN Changa-VF.ttf --ghmarkdown fb.md
-
 **** Warns 04 ****
 ******* :: check/points_out_of_bounds
 	NBD
@@ -28,7 +35,6 @@ This file is formatted for use with [[https://www.gnu.org/software/emacs/][Emacs
 	NBD
 ******* :: check/unitsperem_strict
 	NBD
-
 
 ** TODOs
 *** DONE [#A] Rebuild source
