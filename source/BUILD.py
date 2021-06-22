@@ -56,6 +56,8 @@ import os
 import subprocess
 import time
 from fontTools.ttLib import TTFont
+from gftools import stat
+import yaml
 
 
 # Initialize flag parser
@@ -257,7 +259,14 @@ def run_fontmake_variable():
                 % (source, source),
                 shell=True,
             )
+
         print("     [!] Done")
+        # adding stat tables
+        statFont = TTFont("fonts/%s-VF.ttf" %source)
+        config = yaml.load(open("source/stat.yaml"), Loader=yaml.SafeLoader)
+        stat.gen_stat_tables_from_config(config,[statFont])
+        statFont.save("fonts/%s-VF.ttf" %source)
+
     printG("    [!] Done")
 
 
@@ -379,6 +388,29 @@ def fix_nonhinting():
         subprocess.call(
             "rm -rf fonts/*gasp.ttf", shell=True
             )
+        print("     [+] Done:", path)
+    printG("    [!] Done")
+    time.sleep(1)
+
+def fix_hinting():
+    """
+    Fixes hinting
+    """
+    print("\n**** Run: gftools: fix hinting")
+    for path in glob.glob("fonts/*.ttf"):
+        print(path)
+        subprocess.call(
+                "gftools fix-hinting %s"
+                % path, shell=True
+                )
+        subprocess.call(
+                "mv %s.fix %s"
+                % (path, path), shell=True
+                )
+        subprocess.call(
+                "rm -rf %s.fix"
+                % path, shell=True
+                )
         print("     [+] Done:", path)
     printG("    [!] Done")
     time.sleep(1)
@@ -542,6 +574,7 @@ def main():
         ttfautohint()
     else:
         pass
+    fix_hinting()
     # GoogleFonts
     if args.googlefonts is not None:
         google_fonts()
