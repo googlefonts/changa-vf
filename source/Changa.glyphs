@@ -1,5 +1,5 @@
 {
-.appVersion = "1230";
+.appVersion = "1349";
 DisplayStrings = (
 "æ"
 );
@@ -68076,5 +68076,5 @@ manufacturer = "Eduardo Rodriguez Tunni";
 manufacturerURL = "http://www.tipo.net.ar";
 unitsPerEm = 1000;
 versionMajor = 3;
-versionMinor = 0;
+versionMinor = 1;
 }

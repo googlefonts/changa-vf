@@ -572,9 +572,9 @@ def main():
     # ttfautohint
     if args.ttfautohint is not None:
         ttfautohint()
+        fix_hinting()
     else:
         pass
-    fix_hinting()
     # GoogleFonts
     if args.googlefonts is not None:
         google_fonts()
