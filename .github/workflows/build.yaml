@@ -19,21 +19,3 @@ jobs:
     - name: Check with fontbakery
       run: make test
       continue-on-error: true
-    - name: Generate proofs
-      run: make proof
-    - name: Rearrange
-      run: |
-          mkdir gh-pages
-          mv fontbakery-report.html gh-pages
-          git fetch --depth=1
-          mv proof/* gh-pages
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        branch: gh-pages
-        file_pattern: fonts *.html
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: Artifacts
-        path: |
-          fonts
