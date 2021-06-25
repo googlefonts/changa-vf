@@ -19,3 +19,16 @@ jobs:
     - name: Check with fontbakery
       run: make test
       continue-on-error: true
+    - name: Generate proofs
+      run: make proof
+    - name: Create Artifact Folder
+      run: New-Item -Path '${{ github.workspace }}' -Name "Artifacts" -ItemType "directory"
+      shell: powershell
+    - name: Copy Scripts
+      run: Copy 'Scripts/' '${{ github.workspace }}/Artifacts/Scripts'
+      shell: powershell
+    - name: Publish Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: ${{ github.workspace }}/Artifacts
+        name: ${{ github.run_number }}
