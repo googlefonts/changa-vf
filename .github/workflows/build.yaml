@@ -25,7 +25,6 @@ jobs:
       run: |
           mkdir for-gh-pages
           mv fontbakery-report.html for-gh-pages
-          git fetch --depth=1
           mv proof/* for-gh-pages
     - name: Archive artifacts
       uses: actions/upload-artifact@v2
@@ -33,6 +32,3 @@ jobs:
         name: Artifacts
         path: |
           for-gh-pages
-    - name: Cleanup
-      run: |
-          rm -rf for-gh-pages
