@@ -23,6 +23,7 @@ jobs:
       run: make proof
     - name: Rearrange
       run: |
+          mkdir artifacts
           mv fontbakery-report.html artifacts
           mv proof/* artifacts
     - name: Archive artifacts
