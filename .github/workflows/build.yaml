@@ -33,3 +33,6 @@ jobs:
         name: Artifacts
         path: |
           for-gh-pages
+    - name: Cleanup
+      run: |
+          rm -rf for-gh-pages
