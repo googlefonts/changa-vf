@@ -21,14 +21,13 @@ jobs:
       continue-on-error: true
     - name: Generate proofs
       run: make proof
-    - name: Create Artifact Folder
-      run: New-Item -Path '${{ github.workspace }}' -Name "Artifacts" -ItemType "directory"
-      shell: powershell
-    - name: Copy Scripts
-      run: Copy 'Scripts/' '${{ github.workspace }}/Artifacts/Scripts'
-      shell: powershell
-    - name: Publish Artifact
+    - name: Rearrange
+      run: |
+          mv fontbakery-report.html artifacts
+          mv proof/* artifacts
+    - name: Archive artifacts
       uses: actions/upload-artifact@v2
       with:
-        path: ${{ github.workspace }}/Artifacts
-        name: ${{ github.run_number }}
+        name: Artifacts
+        path: |
+          fonts
