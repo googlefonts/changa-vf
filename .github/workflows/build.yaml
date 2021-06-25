@@ -23,12 +23,13 @@ jobs:
       run: make proof
     - name: Rearrange
       run: |
-          mkdir artifacts
-          mv fontbakery-report.html artifacts
-          mv proof/* artifacts
+          mkdir for-gh-pages
+          mv fontbakery-report.html for-gh-pages
+          git fetch --depth=1
+          mv proof/* for-gh-pages
     - name: Archive artifacts
       uses: actions/upload-artifact@v2
       with:
         name: Artifacts
         path: |
-          artifacts
+          for-gh-pages
