@@ -1,8 +1,5 @@
 {
-.appVersion = "1230";
-DisplayStrings = (
-"æ"
-);
+.appVersion = "1342";
 copyright = "Copyright 2018 The Changa Project Authors (https://github.com/eliheuer/changa-vf)";
 customParameters = (
 {
@@ -55482,7 +55479,7 @@ glyphname = nbspace;
 layers = (
 {
 layerId = "62EAF1BF-1B79-4549-96F9-774E14A065EF";
-width = 150;
+width = 200;
 },
 {
 layerId = "CF2D4400-0F4D-4A72-A30C-ABA3B96311EF";
@@ -68076,5 +68073,5 @@ manufacturer = "Eduardo Rodriguez Tunni";
 manufacturerURL = "http://www.tipo.net.ar";
 unitsPerEm = 1000;
 versionMajor = 3;
-versionMinor = 0;
+versionMinor = 1;
 }
