@@ -1,5 +1,5 @@
 {
-.appVersion = "1342";
+.appVersion = "1349";
 copyright = "Copyright 2018 The Changa Project Authors (https://github.com/eliheuer/changa-vf)";
 customParameters = (
 {
@@ -68073,5 +68073,5 @@ manufacturer = "Eduardo Rodriguez Tunni";
 manufacturerURL = "http://www.tipo.net.ar";
 unitsPerEm = 1000;
 versionMajor = 3;
-versionMinor = 1;
+versionMinor = 3;
 }
